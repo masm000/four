@@ -1,0 +1,35 @@
+<html>
+    <head><title>Jquery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <style>
+        .circle{
+            width:200px;
+            height:200px;
+            border-radius:50%;
+            background-color:red;
+        }
+        button{
+            border:1px solid blanchedalmond;
+            margin:20px 20px 20px 20px;
+        }
+    </style>
+    <body>
+        <div class="circle"></div>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+        <button id="toggle">Toggle</button>
+
+    </body>
+    <script>
+        $('#hide').click(function(){
+            $('.circle').hide();
+        });
+        $('#show').click(function(){
+            $('.circle').show();
+        });
+        $('#toggle').click(function(){
+            $('.circle').toggle();
+        });
+    </script>
+</html>

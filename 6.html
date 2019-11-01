@@ -1,0 +1,39 @@
+<html>
+    <head><title>Jquery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <style>
+        .circle{
+            width:200px;
+            height:200px;
+            border-radius:50%;
+            background-color:red;
+        }
+        button{
+            border:1px solid blanchedalmond;
+            margin:20px 20px 20px 20px;
+        }
+    </style>
+    <body>
+        <div class="circle"></div>
+        <button id="fin">Fade In</button>
+        <button id="fout">Fade Out</button>
+        <button id="ftoggle">Fade Toggle</button>
+        <button id="fto">Fade To</button>
+
+    </body>
+    <script>
+        $('#fin').click(function(){
+            $('.circle').fadeIn();
+        });
+        $('#fout').click(function(){
+            $('.circle').fadeOut();
+        });
+        $('#ftoggle').click(function(){
+            $('.circle').fadeToggle();
+        });
+        $('#fto').click(function(){
+            $('.circle').fadeTo("slow",0.45);
+        });
+    </script>
+</html>

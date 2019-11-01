@@ -1,0 +1,55 @@
+<html>
+    <head><title>Form Validation</title></head>
+    <style>
+        #form{
+            width:150px;
+            margin-bottom: 10px;  
+        }       
+    </style>
+    <body>
+        <div id="form">
+            <label>Username:</label>
+            <input type="text" maxlength="8" placeholder="Enter Username" id="uname"><br>
+            <label>Password:</label>
+            <input type="password" maxlength="5" placeholder="Enter Password" id="pass"><br>
+            <label>Confirm Password:</label>
+            <input type="password" maxlength="5" placeholder="Re-Enter Password" id="cpass"><br>
+        </div>
+        <button id="submit">Submit</button>      
+    </body>
+    <script>
+        var error;
+        document.getElementById("submit").onclick= function(){
+            validate();
+            if(error==0)
+            {
+                alert("Form has been submitted!");
+            }
+        }
+        function validate()
+        {
+            error=0;
+            var uname=document.getElementById("uname").value;
+            var pass=document.getElementById("pass").value;
+            var cpass=document.getElementById("cpass").value;
+            if(uname==""||pass==""||cpass=="")
+            {
+                error=1;
+                alert("Textfield empty");
+            }
+            else
+            {
+                if(!isNaN(uname))
+                {
+                    error=1;
+                    alert("Username should not conatain numbers");
+                }
+                if(pass!=cpass)
+                {
+                    error=1;
+                    alert("Passwords Don't match!");
+                }
+            }
+        }
+    </script>
+</html>
